@@ -1,3 +1,42 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Javier Rodríguez"
+theme = "hugo-theme-m10c"
+enableEmoji = true
+
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name = "About Me"
+        url = "/about/"
+        weight = 1
+        [menu.main.params]
+            class = "highlight-menu-item"
+    [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 2
+    [[menu.main]]
+        identifier = "social"
+        name = "Social Media"
+        url = "/social/"
+        weight = 3
+
+[params]
+    author = "Javier Rodriguez Campo"
+    description = "MSc Cibersecurity Student"
+    menu_item_separator = " | "
+    avatar = "curriculum.png"
+    [[params.social]]
+        icon = "github"
+        name = "Github"
+        url = "https://github.com/javirodriguezzz"
+    [[params.social]]
+        icon = "twitter"
+        name = "Twitter"
+        url = "https://twitter.com/jrodriguezz24"
+    [[params.social]]
+        icon = "linkedin"
+        name = "LinkedIn"
+        url = "https://linkedin.com/in/jrcampo"
