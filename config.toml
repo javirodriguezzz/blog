@@ -1,4 +1,4 @@
-baseURL = "https://javirodriguezzz.github.io/blog/"
+baseURL = "https://jrcampo.com/blog/"
 languageCode = "en-us"
 title = "Javier Rodríguez"
 theme = "hugo-theme-m10c"
