@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javier Rodríguez</title><link>http://example.org/</link><description>Recent content on Javier Rodríguez</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Mar 2022 20:03:28 +0200</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>About Me</title><link>http://example.org/about/</link><pubDate>Wed, 01 Jun 2022 20:31:53 +0200</pubDate><guid>http://example.org/about/</guid><description>General Information 👋 Hi, I’m Javier Rodríguez Campo, a 23 years old boy from Sarria (Galicia, Spain).
+👨‍🎓 Graduated from Universade de Vigo in Computer Engineering (2017-2021). 👀 My interests are cybersecurity, engineering and the development of technology for the space environment.
+🌱 I’m currently learning Cybersecurity, finishing a MSc in this area (MUniCS).
+📫 You can reach me sending an email to javi.rodrgz@gmail.com or j.rcampo@udc.es
+My CV: My Video-CV: Disclaimer: This video was done for academic purposes in 2021, so probably some of its content is outdated.</description></item><item><title>Social Media</title><link>http://example.org/social/</link><pubDate>Wed, 01 Jun 2022 20:31:53 +0200</pubDate><guid>http://example.org/social/</guid><description>Related Tweets 🔥🔥🔥🏀🏀🏀 victoria e ascenso nun competido partido do noso senior de MGR CB Sarria ante o Grupo Pele Terra Chá. Imos CB!!!! pic.twitter.com/0iuMMbgbtd
+&amp;mdash; C. B. Sarria (@cbsarria) May 22, 2022 Cómo crees que va ser tú boda VS cómo en realidad va ser @LaResistencia pic.twitter.com/LCCY7IqI54
+&amp;mdash; Javi Rodríguez (@jrodriguezz24) May 29, 2019 facts pic.twitter.com/4EUTI8kbtg
+&amp;mdash; Javi Rodríguez (@jrodriguezz24) January 30, 2021</description></item><item><title>Shodan Browser</title><link>http://example.org/posts/first-post/</link><pubDate>Thu, 24 Mar 2022 20:03:28 +0200</pubDate><guid>http://example.org/posts/first-post/</guid><description>Shodan-Browser 🕵️‍♂️ Python script to search queries on Shodan. It gives a detailed inform of each result in the search, including vulnerabilities and exploits.
+Files main.py
+Script which uses the Shodan API for search and obtain an inform from a query. shodan-results.txt
+Example results obtained by the script. Script usage -q &amp;ldquo;Desired query&amp;rdquo;
+Search a defined query. -f &amp;ldquo;queries.txt&amp;rdquo;
+Search from a file with a list of queries. Output example IP: 185.</description></item></channel></rss>
