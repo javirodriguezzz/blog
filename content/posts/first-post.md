@@ -1,11 +1,14 @@
 ---
-title: "Shodan Browser"
+title: "Search automation in Shodan"
 date: 2022-03-24T20:03:28+02:00
 draft: false
 ---
+{{< justify-text >}}
+# ¿What is *Shodan*? :male_detective:
 
-# Shodan-Browser :male_detective:
-Python script to search queries on Shodan. It gives a detailed inform of each result in the search, including vulnerabilities and exploits.
+[Shodan](https://www.shodan.io/) is a search engine which uses a database of billions of publicly available IP addresses from a large number of systems, specially IoT devices. It can find anything that connects directly to te internet and if its devices aren't protected, so can tell everything people with bad intentions need to know to break into your network. 
+
+In this case, a Python script was developed to perform search automation of desired queries on Shodan. It gives a detailed inform of each result in the search, including vulnerabilities and exploits. It can be found in the [following GitHub repo](https://github.com/javirodriguezzz/Shodan-Browser).
 
 ### Files
 - **main.py**  
@@ -19,6 +22,54 @@ Example results obtained by the script.
 Search a defined query.
 - **-f "queries.txt"**  
 Search from a file with a list of queries.
+
+### Main method  
+```python
+def shodan_search(query, filepath):
+    try:
+        results = api.search(query)
+
+        f = open(filepath, "w")
+        for result in results['matches']:
+            vuln_index = 0
+            f.write("IP: " + result['ip_str'])
+            f.write("\nProduct: " + str(result['http']['server']))
+            # f.write("\nInfo: " + str(result['info']))
+            f.write("\nOS: " + str(result['os']))
+            f.write("\nOrganization: " + str(result['org']))
+            f.write("\nUbication: " + result['location']['city'] + ", " + str(result['location']['longitude']) + "/" + str(result['location']['latitude']) + ", " + result['location']['country_name'])
+            ports = api.host(result['ip_str'])
+            f.write("\nOpen ports: " + str(ports))
+            f.write("\nVulnerabilities: ")
+            try:
+                for vuln in result['vulns']:
+                    f.write("\n  - " + vuln)
+                    if vuln_index != 3:
+                        exploits_api_url = "https://exploits.shodan.io/api/search?query={query}&key={api_key}"
+                        exploit_query = exploits_api_url.format(query=vuln,
+                                                                api_key=API_KEY)
+                        response = requests.get(exploit_query)
+                        try:
+                            response_json = response.json()
+                            if len(response_json['matches']) > 0:
+                                for match in response_json['matches']:
+                                    f.write('\nExploit: ' + match['description'])
+                                    print('¡Exploit found! IP: ' + result['ip_str'])
+                        except ValueError:
+                            print('No exploits found for device ' + result['ip_str'] + "(" + vuln + ")")
+
+                    vuln_index = vuln_index + 1
+                    time.sleep(1)
+            except KeyError:
+                pass
+
+            f.write("\n\n")
+        f.close()
+        print("Search finished for query: " + query)
+
+    except shodan.APIError as e:
+        print("Error: " + str(e))
+```
 
 ### Output example
 >IP: 185.X.X.X  
