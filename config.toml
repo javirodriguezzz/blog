@@ -29,14 +29,14 @@ enableEmoji = true
     menu_item_separator = " | "
     avatar = "curriculum.png"
     [[params.social]]
-        icon = "github"
-        name = "Github"
-        url = "https://github.com/javirodriguezzz"
+        icon = "linkedin"
+        name = "LinkedIn"
+        url = "https://linkedin.com/in/jrcampo"
     [[params.social]]
         icon = "twitter"
         name = "Twitter"
         url = "https://twitter.com/jrodriguezz24"
     [[params.social]]
-        icon = "linkedin"
-        name = "LinkedIn"
-        url = "https://linkedin.com/in/jrcampo"
+        icon = "github"
+        name = "Github"
+        url = "https://github.com/javirodriguezzz"
