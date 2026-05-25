@@ -1,0 +1,82 @@
+/* Space white color palette */
+:root {
+  --bg-deep:                     #000000;
+
+  --accent-primary:              #e2e8f0;
+  --accent-mid-purple:           #f1f5f9;
+  --accent-light-purple:         #ffffff;
+  --accent-secondary:            #94a3b8;
+  --accent-hover:                #ffffff;
+
+  --accent-primary-rgba-03:      rgba(226, 232, 240, 0.3);
+  --accent-primary-rgba-05:      rgba(226, 232, 240, 0.5);
+  --accent-light-purple-rgba-01: rgba(255, 255, 255, 0.1);
+  --accent-light-purple-rgba-03: rgba(255, 255, 255, 0.3);
+  --accent-mid-purple-rgba-05:   rgba(241, 245, 249, 0.05);
+  --accent-mid-purple-rgba-01:   rgba(241, 245, 249, 0.1);
+  --accent-mid-purple-rgba-02:   rgba(241, 245, 249, 0.2);
+
+  --tag-color: #e2e8f0;
+  --tag-bg:    rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --accent-primary:              #1e293b;
+  --accent-mid-purple:           #334155;
+  --accent-light-purple:         #475569;
+  --accent-secondary:            #64748b;
+  --accent-hover:                #0f172a;
+  --glass-border:                rgba(30, 41, 59, 0.3);
+
+  --accent-primary-rgba-03:      rgba(30,  41,  59,  0.3);
+  --accent-primary-rgba-05:      rgba(30,  41,  59,  0.5);
+  --accent-light-purple-rgba-01: rgba(71,  85,  105, 0.1);
+  --accent-light-purple-rgba-03: rgba(71,  85,  105, 0.3);
+  --accent-mid-purple-rgba-05:   rgba(51,  65,  85,  0.05);
+  --accent-mid-purple-rgba-01:   rgba(51,  65,  85,  0.1);
+  --accent-mid-purple-rgba-02:   rgba(51,  65,  85,  0.2);
+
+  --tag-color: #1e293b;
+  --tag-bg:    rgba(30, 41, 59, 0.08);
+}
+
+/* Black background with faint star-glow in the center */
+body {
+  background-color: #000000;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(0,   0,   0,   0.97) 50%,
+    #000000 100%
+  );
+}
+
+/* Light theme: keep white */
+[data-theme="light"] body {
+  background-color: #ffffff;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(226, 232, 240, 0.4) 0%,
+    #ffffff 70%
+  );
+}
+
+/* Header: pure black translucent */
+.sticky-header {
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+[data-theme="light"] .sticky-header {
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+/* Logo: white with subtle glow on hover */
+.header-logo .logo-link {
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.header-logo .logo-link:hover {
+  color: var(--accent-secondary);
+}

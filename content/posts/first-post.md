@@ -2,6 +2,7 @@
 title: "Search automation in Shodan [EN]"
 date: 2022-03-24T20:03:28+02:00
 draft: false
+tags: ["shodan", "python", "automation", "cybersecurity"]
 ---
 {{< justify-text >}}
 # ¿What is *Shodan*? :male_detective:

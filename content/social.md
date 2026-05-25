@@ -6,6 +6,6 @@ draft: false
 
 ### Related Tweets
 
-{{< tweet "1528466862866055174" >}}
-{{< tweet "1133853954549403650" >}}
-{{< tweet "1355489571514015750" >}}
+{{< x user="jrodriguezz24" id="1528466862866055174" >}}
+{{< x user="jrodriguezz24" id="1133853954549403650" >}}
+{{< x user="jrodriguezz24" id="1355489571514015750" >}}

@@ -1,42 +1,87 @@
 baseURL = "https://jrcampo.com/"
-languageCode = "en-us"
-title = "Javier Rodríguez"
-theme = "hugo-theme-m10c"
+title = "jrcampo"
+theme = "mana"
+defaultContentLanguage = "en"
 enableEmoji = true
 
-[menu]
-    [[menu.main]]
-        identifier = "about"
-        name = "About Me"
-        url = "/about/"
-        weight = 1
-        [menu.main.params]
-            class = "highlight-menu-item"
-    [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 2
-    [[menu.main]]
-        identifier = "social"
-        name = "Social Media"
-        url = "/social/"
-        weight = 3
+[pagination]
+  pageSize = 10
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+    ordered = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
+    style = "catppuccin-macchiato"
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [params]
-    author = "Javier Rodriguez Campo"
-    description = "MSc Cibersecurity Student"
-    menu_item_separator = " | "
-    avatar = "curriculum.png"
-    [[params.social]]
-        icon = "linkedin"
-        name = "LinkedIn"
-        url = "https://linkedin.com/in/jrcampo"
-    [[params.social]]
-        icon = "twitter"
-        name = "Twitter"
-        url = "https://twitter.com/jrodriguezz24"
-    [[params.social]]
-        icon = "github"
-        name = "Github"
-        url = "https://github.com/javirodriguezzz"
+  enableIntegrity = false
+  relatedPostsCount = 3
+  description = "Cybersecurity Engineer from Galicia, Spain"
+  author = "Javier Rodriguez Campo"
+  heroTitleLine1 = "JAVIER RODRÍGUEZ"
+  heroTitleLine2 = "CYBERSECURITY ENGINEER"
+  footerText = "Built with Hugo and Mana theme"
+
+  [params.avatar]
+    url = "/curriculum.png"
+
+  [params.social]
+    github = "https://github.com/javirodriguezzz"
+    linkedin = "https://www.linkedin.com/in/jrcampo"
+    twitter = "jrodriguezz24"
+    email = "javi.rodrgz@gmail.com"
+
+  [params.buyMeACoffee]
+    enabled = false
+    id = ""
+
+  [params.codeHighlight]
+    darkTheme = "catppuccin-macchiato"
+    lightTheme = "catppuccin-frappe"
+
+  [params.copyright]
+    startYear = 2022
+    owner = "Javier Rodriguez Campo"
+
+  [params.admonitions]
+    alertStyle = "favicon"
+
+[[menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "Posts"
+  pageRef = "/posts"
+  weight = 20
+
+[[menus.main]]
+  name = "Tags"
+  pageRef = "/tags"
+  weight = 30
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
