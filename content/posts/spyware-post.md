@@ -2,6 +2,7 @@
 title: "The homemade Pegasus [EN]"
 date: 2022-06-02T17:03:28+02:00
 draft: false
+tags: ["android", "malware", "spyware", "cybersecurity"]
 ---
 {{< justify-text >}}
 

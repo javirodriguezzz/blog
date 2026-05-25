@@ -21,7 +21,7 @@ Pero años después afrontamos una nueva temporada en la que volvimos a coincidi
 
 _Partido completo en [YouTube](https://www.youtube.com/watch?v=fSf9Abd0SgI&t=1962s&ab_channel=CanalYouTubedeITS)._
 
-{{< tweet "1528466862866055174" >}}
+{{< x user="jrodriguezz24" id="1528466862866055174" >}}
 
 #### _C.B Sarria amarillo es...¡SOMOS DE AUTONÓMICA!_
 ![Celebración río](/ascenso-rio.jpg 'Celebración río')

@@ -1,15 +1,17 @@
 ---
 title: "About Me"
-date: 2022-06-01T20:31:53+02:00
+date: 2026-05-26T00:19:53+02:00
 draft: false
 ---
 {{< about-css >}}
 ### General Information
-👋 Hi, I’m Javier Rodríguez Campo, a 23 years old boy from Sarria (Galicia, Spain).   
-👨‍🎓 Graduated from [Universade de Vigo](https://www.uvigo.gal/) in Computer Engineering (*2017-2021*).     
+👋 Hi, I’m Javier Rodríguez Campo, from Sarria (Galicia, Spain).   
+👨‍🎓 Graduated from [Universade de Vigo](https://www.uvigo.gal/) in Computer Engineering (*2017-2021*).
+👨‍🎓 Graduated from [Universade da Coruña](https://www.udc.gal/) in MSc of Cybersecurity ([MUniCS](https://www.munics.es/)) (*2021-2023*).        
 👀 My interests are cybersecurity, engineering and the development of technology for the space environment.  
-🌱 I’m currently learning Cybersecurity, finishing a MSc in this area ([MUniCS](https://www.munics.es/)).  
-📫 You can reach me sending an email to javi.rodrgz@gmail.com or j.rcampo@udc.es
+📫 You can reach me sending an email to javi.rodrgz@gmail.com
+
+{{< iframe >}}
 
 ### My Workstation
 
@@ -33,10 +35,6 @@ draft: false
 - *Headset*: Corsair HS70 
 
 ![PC](/PC.jpg 'My PC')
-
-#### My CV:
-
-{{< iframe >}}
 
 #### My Video-CV:
 
