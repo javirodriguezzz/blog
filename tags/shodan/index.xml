@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shodan on jrcampo</title><link>https://jrcampo.com/tags/shodan/</link><description>Recent content in Shodan on jrcampo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 24 Mar 2022 20:03:28 +0200</lastBuildDate><atom:link href="https://jrcampo.com/tags/shodan/index.xml" rel="self" type="application/rss+xml"/><item><title>Search automation in Shodan [EN]</title><link>https://jrcampo.com/posts/first-post/</link><pubDate>Thu, 24 Mar 2022 20:03:28 +0200</pubDate><guid>https://jrcampo.com/posts/first-post/</guid><description>&lt;style&gt;
+p {
+ text-align: justify;
+}
+li {
+ text-align: justify;
+}
+img {
+ width: 30%;
+ height: 30%;
+ display: block;
+ margin: auto;
+}
+tbody {
+ border-collapse: collapse;
+ border: 2px #29f3c3;
+}
+&lt;/style&gt;
+&lt;h1 id="what-is-shodan-male_detective"&gt;¿What is &lt;em&gt;Shodan&lt;/em&gt;? &amp;#x1f575;&amp;#xfe0f;&amp;zwj;&amp;#x2642;&amp;#xfe0f;&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.shodan.io/"&gt;Shodan&lt;/a&gt; is a search engine which uses a database of billions of publicly available IP addresses from a large number of systems, specially IoT devices. It can find anything that connects directly to te internet and if its devices aren&amp;rsquo;t protected, so can tell everything people with bad intentions need to know to break into your network.&lt;/p&gt;</description></item></channel></rss>
