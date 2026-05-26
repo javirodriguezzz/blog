@@ -1,0 +1,97 @@
+<div class="timeline" id="experience-timeline">
+
+  {{ range $i, $entry := site.Data.experience }}
+  {{ $side := "tl-right" }}
+  {{ if eq (mod $i 2) 0 }}{{ $side = "tl-left" }}{{ end }}
+
+  <div class="tl-row {{ $side }}">
+
+    {{ if eq $side "tl-left" }}
+
+      <div class="tl-card-wrap tl-anim">
+        <div class="timeline-card tl-card-{{ $entry.type }}">
+          <div class="tl-card-header">
+            <span class="tl-date">{{ $entry.date }}</span>
+            <span class="tl-badge tl-badge-{{ $entry.type }}">
+              {{ if eq $entry.type "work" }}Work
+              {{ else if eq $entry.type "education" }}Education
+              {{ else }}Cert{{ end }}
+            </span>
+          </div>
+          <h3 class="tl-title">{{ $entry.title }}</h3>
+          <p class="tl-org">{{ $entry.organization }}</p>
+          {{ with $entry.detail }}<p class="tl-detail">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot tl-dot-{{ $entry.type }}">
+          {{ if eq $entry.type "work" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          {{ else if eq $entry.type "education" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          {{ else }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="tl-empty"></div>
+
+    {{ else }}
+
+      <div class="tl-empty"></div>
+
+      <div class="tl-node">
+        <div class="tl-dot tl-dot-{{ $entry.type }}">
+          {{ if eq $entry.type "work" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          {{ else if eq $entry.type "education" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          {{ else }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="tl-card-wrap tl-anim">
+        <div class="timeline-card tl-card-{{ $entry.type }}">
+          <div class="tl-card-header">
+            <span class="tl-date">{{ $entry.date }}</span>
+            <span class="tl-badge tl-badge-{{ $entry.type }}">
+              {{ if eq $entry.type "work" }}Work
+              {{ else if eq $entry.type "education" }}Education
+              {{ else }}Cert{{ end }}
+            </span>
+          </div>
+          <h3 class="tl-title">{{ $entry.title }}</h3>
+          <p class="tl-org">{{ $entry.organization }}</p>
+          {{ with $entry.detail }}<p class="tl-detail">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+
+    {{ end }}
+
+  </div>
+  {{ end }}
+
+</div>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('#experience-timeline .tl-anim');
+  if (!items.length || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('tl-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('tl-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>

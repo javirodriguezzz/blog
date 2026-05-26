@@ -7,9 +7,9 @@ draft: false
 ### General Information
 👋 Hi, I’m Javier Rodríguez Campo, from Sarria (Galicia, Spain).   
 
-👨‍🎓 Graduated from [Universade de Vigo](https://www.uvigo.gal/) in Computer Engineering (*2017-2021*).
+👨‍🎓 Graduated from [Universidade de Vigo](https://www.uvigo.gal/) in Computer Engineering (*2017-2021*).
 
-👨‍🎓 Graduated from [Universade da Coruña](https://www.udc.gal/) in MSc of Cybersecurity ([MUniCS](https://www.munics.es/)) (*2021-2023*).        
+👨‍🎓 Graduated from [Universidade da Coruña](https://www.udc.gal/) in MSc of Cybersecurity ([MUniCS](https://www.munics.es/)) (*2021-2023*).        
 
 👀 My interests are cybersecurity, engineering and the development of technology for the space environment.  
 

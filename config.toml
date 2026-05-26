@@ -71,16 +71,21 @@ enableEmoji = true
   weight = 10
 
 [[menus.main]]
-  name = "Posts"
-  pageRef = "/posts"
+  name = "Experience"
+  url = "/experience/"
   weight = 20
-
-[[menus.main]]
-  name = "Tags"
-  pageRef = "/tags"
-  weight = 30
 
 [[menus.main]]
   name = "About"
   url = "/about/"
+  weight = 30
+
+[[menus.main]]
+  name = "Posts"
+  pageRef = "/posts"
   weight = 40
+
+[[menus.main]]
+  name = "Tags"
+  pageRef = "/tags"
+  weight = 50
