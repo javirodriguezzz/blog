@@ -40,7 +40,6 @@ enableEmoji = true
   author = "Javier Rodriguez Campo"
   heroTitleLine1 = "JAVIER RODRÍGUEZ"
   heroTitleLine2 = "CYBERSECURITY ENGINEER"
-  footerText = "Built with Hugo and Mana theme"
 
   [params.avatar]
     url = "/curriculum.png"

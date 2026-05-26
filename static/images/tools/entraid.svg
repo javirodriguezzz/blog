@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Microsoft four-color logo mark -->
+  <rect x="2"  y="2"  width="45" height="45" rx="2" fill="#F25022"/>
+  <rect x="53" y="2"  width="45" height="45" rx="2" fill="#7FBA00"/>
+  <rect x="2"  y="53" width="45" height="45" rx="2" fill="#00A4EF"/>
+  <rect x="53" y="53" width="45" height="45" rx="2" fill="#FFB900"/>
+</svg>
