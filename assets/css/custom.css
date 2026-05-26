@@ -80,3 +80,168 @@ body {
 .header-logo .logo-link:hover {
   color: var(--accent-secondary);
 }
+
+[data-theme="light"] .header-logo .logo-link {
+  color: #0f172a;
+}
+
+[data-theme="light"] .header-logo .logo-link:hover {
+  color: var(--accent-primary);
+}
+
+/* Footer centered on all resolutions */
+.footer-text {
+  text-align: center;
+  width: 100%;
+}
+
+/* Hero subtitle — terminal typewriter effect */
+.hero-subtitle {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hero-subtitle::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 1px;
+  animation: hero-cursor-blink 0.75s step-end infinite;
+  color: var(--accent-secondary);
+  font-weight: 300;
+}
+
+@keyframes hero-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+
+/* CV Download Button — theme-aware */
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, transform 150ms ease;
+  backdrop-filter: blur(8px);
+}
+
+.cv-download-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .cv-download-btn {
+  background: rgba(30, 41, 59, 0.06);
+  border-color: rgba(30, 41, 59, 0.35);
+  color: #1e293b;
+}
+
+[data-theme="light"] .cv-download-btn:hover {
+  background: rgba(30, 41, 59, 0.14);
+  border-color: rgba(30, 41, 59, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Tools / Knowledge section */
+.tools-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.tools-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.tool-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Logo image (PingAM, Entra ID, Splunk, CrowdStrike) */
+.tool-logo {
+  width: 64px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* Inline SVG icon wrapper (Passwordless, Identity for AI) */
+.tool-icon-inline {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.tool-category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Light theme: make tool cards and post cards visible */
+[data-theme="light"] .tool-card,
+[data-theme="light"] .post-card {
+  background: rgba(241, 245, 249, 0.9);
+  border-color: rgba(30, 41, 59, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .tool-card:hover,
+[data-theme="light"] .post-card:hover {
+  border-color: rgba(30, 41, 59, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
